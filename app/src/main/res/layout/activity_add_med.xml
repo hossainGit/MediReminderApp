@@ -23,8 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginBottom="79dp"
         android:text="Add Medication"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="@+id/medName"
@@ -58,7 +58,8 @@
         android:id="@+id/addMedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="37dp"
+        android:backgroundTint="@color/green"
+        android:layout_marginEnd="36dp"
         android:layout_marginBottom="56dp"
         android:text="Add Medication"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,32 +70,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:layout_marginEnd="5dp"
         android:text="Morning"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox3"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <CheckBox
         android:id="@+id/checkBox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="2dp"
+        android:layout_marginStart="25dp"
         android:layout_marginBottom="32dp"
         android:text="Noon"
         app:layout_constraintBottom_toTopOf="@+id/radioButton6"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox4"
-        app:layout_constraintStart_toEndOf="@+id/checkBox2" />
+        app:layout_constraintStart_toEndOf="@+id/radioButton6" />
 
     <CheckBox
         android:id="@+id/checkBox4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="22dp"
+        android:layout_marginEnd="63dp"
         android:text="Night"
         app:layout_constraintBaseline_toBaselineOf="@+id/checkBox3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/checkBox3" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <RadioButton
         android:id="@+id/radioButton6"
@@ -115,6 +112,17 @@
         android:text="After Meal"
         app:layout_constraintStart_toStartOf="@+id/radioButton6"
         app:layout_constraintTop_toTopOf="@+id/radioButton6" />
+
+    <Button
+        android:id="@+id/discardBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="@color/red"
+        android:text="Discard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

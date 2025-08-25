@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp">
+
+    <!--                1st box-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!--               info box     -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:id="@+id/CName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicine Name"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/CDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Morning | After Meal | 1 Tablet"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+            <!--For the textview below: (text=Avilable/Runnning Low/Empty)
+            android:textColor="@color/green or @color/Orange or @color/red"
+            -->
+            <TextView
+                android:id="@+id/isAvilable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Avilable"
+                android:textColor="@color/green"
+                android:textSize="20sp" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textSize="40sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="20dp"/>
+
+        <!--      btn box              -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingEnd="20dp">
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/mint_green"
+                android:text="+"
+                android:textSize="22sp"
+                android:textColor="@android:color/white"
+                android:padding="0dp"/>
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:text="-"
+                android:padding="0dp"
+                android:textSize="25sp"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+    <!--  end of 1st box-->
+</com.google.android.material.card.MaterialCardView>
