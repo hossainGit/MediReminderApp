@@ -1,123 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mediTime">
-
-    <!-- TODO: Update blank fragment layout -->
-
+    tools:context=".mediTime"
+    android:padding="12dp">
 
     <TextView
         android:id="@+id/mtTimes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text="Your medicine schedule: "
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Your medicine schedule:"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="81dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="81dp"
-        android:padding="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mtTimes"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button6"
+        android:layout_marginTop="8dp">
 
         <LinearLayout
             android:id="@+id/scheduleContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="8dp">
 
-            <!-- Morning Section -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🌅 Morning"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            <TextView android:id="@+id/labelMorning" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌅 Morning" android:textSize="18sp" android:textStyle="bold"/>
+            <LinearLayout android:id="@+id/morningContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="12dp" />
 
-            <LinearLayout
-                android:id="@+id/morningContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingStart="20dp" />
+            <TextView android:id="@+id/labelNoon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="☀️ Noon" android:textSize="18sp" android:textStyle="bold" android:layout_marginTop="10dp"/>
+            <LinearLayout android:id="@+id/noonContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="12dp"/>
 
-            <!-- Noon Section -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="☀️ Noon"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginTop="12dp" />
-
-            <LinearLayout
-                android:id="@+id/noonContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingStart="20dp" />
-
-            <!-- Night Section -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🌙 Night"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginTop="12dp" />
-
-            <LinearLayout
-                android:id="@+id/nightContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingStart="20dp" />
+            <TextView android:id="@+id/labelNight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌙 Night" android:textSize="18sp" android:textStyle="bold" android:layout_marginTop="10dp"/>
+            <LinearLayout android:id="@+id/nightContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="12dp"/>
         </LinearLayout>
-
-
-
-        <!--        medicationTimeList by morning noon night-->
-
     </ScrollView>
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:text="Edit"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
         android:text="+ Add new"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

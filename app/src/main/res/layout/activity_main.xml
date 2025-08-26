@@ -1,78 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="8dp"
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageButton
-        android:id="@+id/button"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/home_analytics"
-        android:tint="@color/black"
-        android:elevation="6dp"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
+    <!-- Bottom bar container -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/button2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <ImageButton
-        android:id="@+id/button2"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:background="@android:color/transparent"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/plus_box_multiple"
-        android:tint="@color/green"
-        android:elevation="6dp"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/button3"
-        app:layout_constraintStart_toEndOf="@id/button" />
+        <ImageButton
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/home_analytics"
+            android:contentDescription="Dashboard" />
 
-    <ImageButton
-        android:id="@+id/button3"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:background="@android:color/transparent"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/pill"
-        android:tint="@color/blue"
-        android:elevation="6dp"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
-        app:circularflow_defaultRadius="@dimen/cardview_default_radius"
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/plus_box_multiple"
+            android:contentDescription="Add" />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/button4"
-        app:layout_constraintStart_toEndOf="@id/button2" />
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/pill"
+            android:contentDescription="Cabinet" />
 
-    <ImageButton
-        android:id="@+id/button4"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:background="@android:color/transparent"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/cog"
-        android:tint="@color/black"
-        android:elevation="6dp"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/button3" />
+        <ImageButton
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/cog"
+            android:contentDescription="Settings" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="6dp">
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="12dp">
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -21,48 +21,36 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvMedName"
+                android:id="@+id/tvDashMedName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Medicine Name"
-                android:textSize="18sp"
+                android:text="Paracetamol"
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/tvMedDetails"
+                android:id="@+id/tvDashMedDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Morning | Before Meal | 1 tablet"
-                android:textSize="14sp"
-                android:layout_marginTop="4dp"/>
-
-            <TextView
-                android:id="@+id/tvMedStatus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pending"
-                android:textSize="14sp"
-                android:layout_marginTop="6dp"/>
+                android:text="Morning - Before Meal | 1 tab"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_vertical">
+            android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnMedEdit"
+                android:id="@+id/btnDashTaken"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Edit"/>
+                android:text="Taken"/>
 
             <Button
-                android:id="@+id/btnMedDelete"
+                android:id="@+id/btnDashMissed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delete"
-                android:layout_marginTop="8dp"/>
+                android:text="Missed"
+                android:layout_marginTop="6dp"/>
         </LinearLayout>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
