@@ -59,6 +59,7 @@ class mediTime : Fragment() {
         for (m in meds) {
             val times = m.timesCsv.split(",").map { it.trim() }
             for (tLabel in times) {
+
                 val card = inflater.inflate(R.layout.item_medicine, null, false)
                 val tvName = card.findViewById<TextView>(R.id.tvMedName)
                 val tvDetails = card.findViewById<TextView>(R.id.tvMedDetails)
@@ -85,6 +86,7 @@ class mediTime : Fragment() {
                         .setTitle("Delete")
                         .setMessage("Delete ${m.name} reminder?")
                         .setPositiveButton("Yes") { _, _ ->
+
                             PreferenceHelper.deleteReminderById(requireContext(), m.id)
                             loadSchedule()
                         }
@@ -102,9 +104,12 @@ class mediTime : Fragment() {
         }
 
         if (morningContainer.childCount == 0) {
+
             val t = TextView(requireContext())
             t.text = "No morning medicines"
+
             morningContainer.addView(t)
+
         }
         if (noonContainer.childCount == 0) {
             val t = TextView(requireContext())

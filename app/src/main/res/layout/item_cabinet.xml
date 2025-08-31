@@ -9,10 +9,13 @@
     app:cardElevation="6dp">
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="12dp">
+        android:padding="12dp"
+
+        android:gravity="center">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -44,6 +47,17 @@
                 android:textSize="14sp"
                 android:layout_marginTop="6dp"/>
 
+            <Button
+                android:id="@+id/btnDeleteCabinet"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:padding="0dp"
+                android:textSize="12sp"
+                android:backgroundTint="@color/red"
+                android:text="Delete"
+                android:layout_marginTop="6dp"
+                android:elevation="10dp"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -57,8 +71,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10"
-                android:textSize="24sp"
-                android:layout_marginEnd="12dp"/>
+                android:textSize="35sp"
+                android:layout_marginEnd="27dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -66,17 +80,28 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:padding="0dp"
+                    android:textAlignment="center"
                     android:id="@+id/btnInc"
+                    android:layout_height="50dp"
                     android:layout_width="44dp"
-                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:backgroundTint="@color/light_green"
+                    android:textColor="@color/green"
                     android:text="+"/>
 
                 <Button
+                    android:padding="0dp"
+                    android:gravity="center"
                     android:id="@+id/btnDec"
+                    android:textSize="30sp"
                     android:layout_width="44dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:text="-"
-                    android:layout_marginTop="8dp"/>
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/rose_quartz"
+                    android:textColor="@color/red"
+                    />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

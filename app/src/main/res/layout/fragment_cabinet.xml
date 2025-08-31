@@ -38,6 +38,10 @@
         android:id="@+id/button7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Update Cabinet"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:text="Add new reminder to set a pill"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/rose_quartz"
+        android:textColor="@color/black"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

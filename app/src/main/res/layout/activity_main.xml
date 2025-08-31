@@ -34,36 +34,48 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/home_analytics"
-            android:contentDescription="Dashboard" />
+            android:contentDescription="Dashboard"
+            android:tint="@color/ocean_blue"
+            android:scaleType="centerInside"
+            android:padding="12dp" />
 
         <ImageButton
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/plus_box_multiple"
-            android:contentDescription="Add" />
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/calendar_clock"
+            android:contentDescription="Add"
+            android:tint="@color/ocean_blue"
+            android:scaleType="centerInside"
+            android:padding="12dp" />
 
         <ImageButton
             android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/pill"
-            android:contentDescription="Cabinet" />
+            android:contentDescription="Cabinet"
+            android:tint="@color/ocean_blue"
+            android:scaleType="centerInside"
+            android:padding="12dp" />
 
         <ImageButton
             android:id="@+id/button4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
+            android:tint="@color/ocean_blue"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/cog"
-            android:contentDescription="Settings" />
+            android:contentDescription="Settings"
+            android:scaleType="centerInside"
+            android:padding="12dp" />
 
     </LinearLayout>
 

@@ -4,9 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowCompat
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,23 +35,42 @@ class MainActivity : AppCompatActivity() {
 
         // Default fragment
         replaceFragment(Dashboard())
+        btnDashboard.setColorFilter(ContextCompat.getColor(this, R.color.blue))
 
         btnDashboard.setOnClickListener {
+            resetButtonColors()
+            btnDashboard.setColorFilter(ContextCompat.getColor(this, R.color.blue))
             replaceFragment(Dashboard())
         }
 
         btnAdd.setOnClickListener {
+            resetButtonColors()
+            btnAdd.setColorFilter(ContextCompat.getColor(this, R.color.blue))
             replaceFragment(mediTime())
         }
 
         btnCabinet.setOnClickListener {
+            resetButtonColors()
+            btnCabinet.setColorFilter(ContextCompat.getColor(this, R.color.blue))
             replaceFragment(cabinet())
         }
 
         btnSettings.setOnClickListener {
+            resetButtonColors()
+            btnSettings.setColorFilter(ContextCompat.getColor(this, R.color.blue))
             replaceFragment(Settings())
         }
+
     }
+
+    private fun resetButtonColors() {
+        val defaultColor = ContextCompat.getColor(this, R.color.ocean_blue)
+        btnDashboard.setColorFilter(defaultColor)
+        btnAdd.setColorFilter(defaultColor)
+        btnCabinet.setColorFilter(defaultColor)
+        btnSettings.setColorFilter(defaultColor)
+    }
+
 
     private fun replaceFragment(fragment: androidx.fragment.app.Fragment) {
         val ft = supportFragmentManager.beginTransaction()

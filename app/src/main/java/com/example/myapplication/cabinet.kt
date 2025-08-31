@@ -13,15 +13,17 @@ import androidx.fragment.app.Fragment
 class cabinet : Fragment() {
 
     private lateinit var container: LinearLayout
-    private lateinit var btnUpdate: Button
+//    private lateinit var btnUpdate: Button
+//    private lateinit var btnDlt: Button
 
     override fun onCreateView(inflater: LayoutInflater, containerParent: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_cabinet, containerParent, false)
         container = v.findViewById(R.id.cabinetContainer)
-        btnUpdate = v.findViewById(R.id.button7)
-
-        btnUpdate.setOnClickListener { loadCabinet() }
+//        btnUpdate = v.findViewById(R.id.button7)
+//        btnDlt = v.findViewById(R.id.btnDeleteCabinet)
+//
+//        btnUpdate.setOnClickListener { loadCabinet() }
 
         return v
     }
@@ -52,6 +54,7 @@ class cabinet : Fragment() {
             val tvStock = card.findViewById<TextView>(R.id.tvStock)
             val btnInc = card.findViewById<Button>(R.id.btnInc)
             val btnDec = card.findViewById<Button>(R.id.btnDec)
+            val btnDlt = card.findViewById<Button>(R.id.btnDeleteCabinet)
 
             tvName.text = name
             tvDetails.text = "Inventory"
@@ -71,7 +74,7 @@ class cabinet : Fragment() {
                 loadCabinet()
             }
 
-            card.setOnLongClickListener {
+            btnDlt.setOnClickListener {
                 AlertDialog.Builder(requireContext())
                     .setTitle("Remove")
                     .setMessage("Remove $name from cabinet? (Reminders will remain)")

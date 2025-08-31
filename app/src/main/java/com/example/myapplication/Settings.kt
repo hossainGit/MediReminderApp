@@ -24,11 +24,14 @@ class Settings : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+
         val v = inflater.inflate(R.layout.fragment_settings, container, false)
+
         etName = v.findViewById(R.id.editTextText)
         etAge = v.findViewById(R.id.editTextText2)
         etEmail = v.findViewById(R.id.editTextTextEmailAddress)
         swRem = v.findViewById(R.id.switch1)
+
         return v
     }
 

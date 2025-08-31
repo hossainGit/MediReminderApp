@@ -9,6 +9,8 @@
     app:cardElevation="6dp">
 
     <LinearLayout
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -18,7 +20,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingEnd="8dp"
+            android:layout_gravity="center"
+            >
 
             <TextView
                 android:id="@+id/tvMedName"
@@ -49,16 +54,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:layout_marginEnd="10dp">
 
             <Button
                 android:id="@+id/btnMedEdit"
+                android:backgroundTint="@color/orange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Edit"/>
 
             <Button
                 android:id="@+id/btnMedDelete"
+                android:backgroundTint="@color/red"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Delete"

@@ -18,11 +18,15 @@ class Dashboard : Fragment() {
     private lateinit var pillCabinetContainer: LinearLayout
     private lateinit var fab: FloatingActionButton
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?):
+            View? {
+
         val v = inflater.inflate(R.layout.fragment_dashboard, container, false)
         medListContainer = v.findViewById(R.id.medListContainer)
         pillCabinetContainer = v.findViewById(R.id.pillCabinetContainer)
+
         fab = v.findViewById(R.id.fBtn)
 
         fab.setOnClickListener {
@@ -113,14 +117,8 @@ class Dashboard : Fragment() {
             tvName.text = name
             tvStock.text = stock.toString()
 
-            // clicking preview -> open AddMedActivity in edit mode if reminder exists
-            card.setOnClickListener {
-                val raw = PreferenceHelper.getAllReminders(requireContext())
-                    .firstOrNull { it.split("|").firstOrNull() == id }
-                val i = Intent(requireActivity(), addMedActivity::class.java)
-                if (raw != null) i.putExtra("med_raw", raw)
-                startActivity(i)
-            }
+//
+
 
             pillCabinetContainer.addView(card)
         }

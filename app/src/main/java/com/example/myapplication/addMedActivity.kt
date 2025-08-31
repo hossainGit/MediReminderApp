@@ -12,17 +12,17 @@ import androidx.appcompat.app.AppCompatActivity
 
 class addMedActivity : AppCompatActivity() {
 
-    private lateinit var medName: EditText         // R.id.medName
-    private lateinit var medDosage: EditText       // R.id.medDosage
-    private lateinit var medPillsPerDose: EditText// R.id.medPillsPerDose
-    private lateinit var medStock: EditText        // R.id.medStock
-    private lateinit var cbMorning: CheckBox       // in @+id/timeCheckboxes children
+    private lateinit var medName: EditText
+    private lateinit var medDosage: EditText
+    private lateinit var medPillsPerDose: EditText
+    private lateinit var medStock: EditText        // ?? fix
+    private lateinit var cbMorning: CheckBox       // in @+id/timeCheckboxes
     private lateinit var cbNoon: CheckBox
     private lateinit var cbNight: CheckBox
-    private lateinit var rbBefore: RadioButton    // R.id.radioButton6
-    private lateinit var rbAfter: RadioButton     // R.id.radioButton7
-    private lateinit var btnAdd: Button           // R.id/addMedButton
-    private lateinit var btnDiscard: Button       // R.id/discardBtn
+    private lateinit var rbBefore: RadioButton    // khaoar age
+    private lateinit var rbAfter: RadioButton     // khaoar pore
+    private lateinit var btnAdd: Button
+    private lateinit var btnDiscard: Button
 
     private var editingRaw: String? = null
     private var editingId: String? = null
@@ -36,7 +36,7 @@ class addMedActivity : AppCompatActivity() {
         medPillsPerDose = findViewById(R.id.medPillsPerDose)
         medStock = findViewById(R.id.medStock)
 
-        // checkboxes — they are inside LinearLayout but still have ids in XML; use findViewById
+
         cbMorning = findViewById(R.id.checkBox2)
         cbNoon = findViewById(R.id.checkBox3)
         cbNight = findViewById(R.id.checkBox4)
@@ -47,7 +47,7 @@ class addMedActivity : AppCompatActivity() {
         btnAdd = findViewById(R.id.addMedButton)
         btnDiscard = findViewById(R.id.discardBtn)
 
-        // edit mode?
+        // edit mode need?
         editingRaw = intent.getStringExtra("med_raw")
         if (editingRaw != null) prefill(editingRaw!!)
 

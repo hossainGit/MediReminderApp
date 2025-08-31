@@ -25,6 +25,7 @@ object PreferenceHelper {
     // Reminder: id|name|dosage|pillsPerDose|timesCsv|meal|status
     // Cabinet:  id|name|stock
 
+    // ----------------------------- Inserting data +parsing-----------------------------
     fun encodeReminder(m: Medication): String {
         val name = m.name.replace("|", " ")
         val dosage = m.dosage.replace("|", " ")
@@ -60,6 +61,8 @@ object PreferenceHelper {
         return Triple(id, name, stock)
     }
 
+
+    // ----------------------------- Retriving data by decoding-----------------------------
     fun getAllReminders(ctx: Context): MutableSet<String> {
         val set = prefs(ctx).getStringSet(KEY_MED_LIST, null)
         return set?.toMutableSet() ?: mutableSetOf()
@@ -70,6 +73,7 @@ object PreferenceHelper {
         return set?.toMutableSet() ?: mutableSetOf()
     }
 
+    // ----------------------------- Saving data -----------------------------
     fun saveReminders(ctx: Context, set: Set<String>) {
         val editor = prefs(ctx).edit()
         editor.putStringSet(KEY_MED_LIST, set)
@@ -82,7 +86,7 @@ object PreferenceHelper {
         editor.apply()
     }
 
-    // Add or update reminder. If cabinet entry missing, create with cabinetStockIfNew.
+    // Add or update reminder func.cabinetStockIfNew for new pills.
     fun addOrUpdateReminder(ctx: Context, reminderRaw: String, cabinetStockIfNew: Int) {
         val reminders = getAllReminders(ctx)
         val parts = reminderRaw.split("|")
